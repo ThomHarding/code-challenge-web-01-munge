@@ -28,7 +28,11 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    let returnArr = [];
+    arr.forEach(element => {
+        returnArr.push(element.name);
+    });
+    return returnArr;
 }
 
 /*
@@ -76,7 +80,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    return [];
 }
 
 /*
