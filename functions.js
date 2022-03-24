@@ -33,6 +33,7 @@ export function makeArrayOfNames(arr) {
         returnArr.push(element.name);
     });
     return returnArr;
+    //i realize now i did this the hard way and i should've just mapped. oh well
 }
 
 /*
@@ -41,7 +42,8 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    let filteredArr = arr.filter(arr => arr.type === 'dog');
+    return filteredArr.map(filteredArr => filteredArr.name);
 }
 
 /*
@@ -51,7 +53,8 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    let mappedArr = arr.map(arr => arr.type);
+    return mappedArr.reverse();
 }
 
 /*
