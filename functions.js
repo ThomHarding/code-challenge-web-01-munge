@@ -86,7 +86,11 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    let tempArr = arr;
+    tempArr.forEach(item => {
+        item.isHungry = true;
+    });
+    return tempArr;
 }
 
 /*
