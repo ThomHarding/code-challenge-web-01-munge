@@ -153,7 +153,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return arr.filter(arr => arr.name === name);
+    return arr.map(arr => [['name', arr.name], ['type', arr.type]]);
 }
 
 ////////////////////////////////////////////////////////
