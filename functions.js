@@ -182,7 +182,7 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    return arr.filter(arr => arr.type === 'car');
 }
 
 /*
