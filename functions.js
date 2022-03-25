@@ -33,7 +33,6 @@ export function makeArrayOfNames(arr) {
         returnArr.push(element.name);
     });
     return returnArr;
-    //i realize now i did this the hard way and i should've just mapped. oh well
 }
 
 /*
@@ -86,9 +85,9 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    let tempArr = arr;
-    tempArr.forEach(item => {
-        item.isHungry = true;
+    let tempArr = [];
+    arr.forEach(item => {
+        tempArr.push({ name: item.name, isHungry: true, type: item.type });
     });
     return tempArr;
 }
@@ -115,7 +114,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(arr => (arr.name + arr.type));
 }
 
 /*
@@ -128,7 +127,7 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    return (arr.filter(arr => arr.name === name))[0];
 }
 
 /*
@@ -154,7 +153,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr.filter(arr => arr.name === name);
 }
 
 ////////////////////////////////////////////////////////
@@ -188,10 +187,10 @@ export function getCars(arr) {
 
 /*
 Output:
- [
+[
         { type: 'car', make: 'chevy', model: 'malibu' },
         { type: 'car', make: 'chevy', model: 'camero' },
-  ] ;
+] ;
 
 */
 

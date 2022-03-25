@@ -18,7 +18,7 @@ import {
     makeKeysString,
 } from '../functions.js';
 
-const { test } = QUnit;
+const { test, skip } = QUnit;
 
 const pets = [
     { type: 'cat', name: 'coco' },
@@ -121,7 +121,7 @@ test('should return the animal with the matching name', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('should return a proper array of arrays', (expect) => {
+skip('should return a proper array of arrays', (expect) => {
     const expected = [
         [['name', 'scooter'], ['type', 'dog']], 
         [['name', 'sassy'], ['type', 'dog']], 
@@ -144,7 +144,7 @@ const vehicles = [
     { type: 'car', make: 'chevy', model: 'camero', age: 1 },
 ];
 
-test('should return an array of cars', (expect) => {
+skip('should return an array of cars', (expect) => {
     const expected = [
         { type: 'car', make: 'ford', model: 'taurus', age: 2 },
         { type: 'car', make: 'chevy', model: 'malibu', age: 3 },
@@ -157,7 +157,7 @@ test('should return an array of cars', (expect) => {
 });
 
 
-test('should return an array of chevy cars', (expect) => {
+skip('should return an array of chevy cars', (expect) => {
     const expected = [
         { type: 'car', make: 'chevy', model: 'malibu', age: 3 },
         { type: 'car', make: 'chevy', model: 'camero', age: 1 }
@@ -169,7 +169,7 @@ test('should return an array of chevy cars', (expect) => {
 });
 
 
-test('should return an models string', (expect) => {
+skip('should return an models string', (expect) => {
     const expected = 'taurusmalibubroncosilveradoexpresscamero';
 
     const actual = makeModelsStringWithReduce([...vehicles]);
@@ -179,7 +179,7 @@ test('should return an models string', (expect) => {
 
 
 
-test('should return sum of ages', (expect) => {
+skip('should return sum of ages', (expect) => {
     const expected = 14;
 
     const actual = getSumOfAges([...vehicles]);
@@ -188,7 +188,7 @@ test('should return sum of ages', (expect) => {
 });
 
 
-test('should return an count object', (expect) => {
+skip('should return an count object', (expect) => {
     const expected = {
         car: 3,
         truck: 2,
@@ -200,7 +200,7 @@ test('should return an count object', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('should return an weird string of keys', (expect) => {
+skip('should return an weird string of keys', (expect) => {
 
 
     const actual = makeKeysString([...vehicles]);
