@@ -18,7 +18,7 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    return arr.filter(arr => arr.type === 'dog');
 }
 
 /*
@@ -28,7 +28,11 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    let returnArr = [];
+    arr.forEach(element => {
+        returnArr.push(element.name);
+    });
+    return returnArr;
 }
 
 /*
@@ -37,7 +41,8 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    let filteredArr = arr.filter(arr => arr.type === 'dog');
+    return filteredArr.map(filteredArr => filteredArr.name);
 }
 
 /*
@@ -47,7 +52,8 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    let mappedArr = arr.map(arr => arr.type);
+    return mappedArr.reverse();
 }
 
 /*
@@ -62,9 +68,12 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    let spanishArray = [];
+    arr.forEach(item => {
+        spanishArray.push({ nombre: item.name, tipo: item.type });
+    });
+    return spanishArray;
 }
-
 /*
 Output:
 
@@ -76,7 +85,11 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    let tempArr = [];
+    arr.forEach(item => {
+        tempArr.push({ name: item.name, isHungry: true, type: item.type });
+    });
+    return tempArr;
 }
 
 /*
@@ -90,7 +103,7 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map(arr => ({ name:arr.name.toUpperCase(), type:arr.type }));
 }
 
 
@@ -101,7 +114,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(arr => (arr.name + arr.type));
 }
 
 /*
@@ -114,7 +127,7 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    return (arr.filter(arr => arr.name === name))[0];
 }
 
 /*
@@ -140,7 +153,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr.map(arr => [['name', arr.name], ['type', arr.type]]);
 }
 
 ////////////////////////////////////////////////////////
@@ -169,20 +182,20 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    return arr.filter(arr => arr.type === 'car');
 }
 
 /*
 Output:
- [
+[
         { type: 'car', make: 'chevy', model: 'malibu' },
         { type: 'car', make: 'chevy', model: 'camero' },
-  ] ;
+] ;
 
 */
 
 export function getChevyCars(arr) {
-    return [];
+    return arr.filter(arr => (arr.make === 'chevy' & arr.type === 'car'));
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
